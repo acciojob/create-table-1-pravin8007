@@ -1,13 +1,13 @@
-let row = 3 ;
-let table = document.getElementById("sampleTable");
+// let table = document.getElementById("sampleTable");
+// let tr1 = document.getElementsByTagName("tr");
 function insert_Row() {
     //Write your code here
-	let newRow = document.createElement("tr");
-	let cell1 = document.createElement("td");
-	let cell2 = document.createElement("td");
-	cell1.innerText = `Row${row} cell1`;
-	cell2.innerText = `Row${row} cell2`;
-	row++;
-	newRow.append(cell1,cell2);
-	table.appendChild(newRow);
+	var table = document.getElementById("sampleTable");
+  var newRow = table.insertRow(0);
+
+  var cell1 = newRow.insertCell(0);
+  var cell2 = newRow.insertCell(1);
+
+  cell1.innerHTML = "New Cell1";
+  cell2.innerHTML = "New Cell2";
 }
